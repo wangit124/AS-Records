@@ -1,33 +1,114 @@
-<!DOCTYPE html>
 <html lang="en">
-	<head>
-	<meta charset="UTF-8"/>
-	<meta name="viewport" content="user-scalable=no width=device-width, 
-		initial-scale=1.0 maximum-scale=1, minimum-scale=1/>
-	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<title>AS Records</title>
 
-	<script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.0.8/stitch.js"></script>
-	<script src="init.js"></script>									     
-</head>
-<body>
-    <div class="results-bar">
-  <p>Count of Results:</p>
-  <span id="num-results" class="results-bar__count"></span>
-</div>
-<table class="table table-striped">
-  <thead class="thead">
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Position</th>
-      <th>Manager</th>
-      <th>Salary</th>
-    </tr>
-  </thead>
-  <tbody id='employees'></tbody>
-</table>
-                             
-</body>
-                                     
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>AS Records</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <div id="search-bar" onclick="hoverup()">
+            <input type="text" name="Search" value="" autocomplete="off" id="myinput" onkeyup="searchFunction()" placeholder="AS Records">
+        </div>
+        <ul id="wrapper">
+            <div id="openable" onclick="open()">
+            <li>
+                    <span>
+                    <div class="text-wrapper"><h2>Fall 18/19 Meeting 2</h2><p>
+                        <br>Date/Time/Location: Wednesday, October 10, 2018 / 6:05pm / Price Center East Forum <br>
+                        Speaker/Clerk: Nikhil Pothuru (presiding) / Clerk Christian (present)<br>
+                        <br>Roll (present):</p><br>
+                        <table><tr>
+                            <th>Kiara Gomez</th>
+                            <th>Daron Woods</th>
+                            <th>Caroline Siegel-Singh</th>
+                            <th>Nathan Park</th> 
+                            <th>Daniela Bernardi</th>
+                            <th>Kenji Asakura</th>
+                        </tr></table><br>
+                        <p>Public input was given by Sophie from CALPIRG, Ethan from The Triton, and Prajay from
+                        External Affairs.<br><br>
+                        A special presentation was given by Annie Park regarding Proposed Changes in Title IX at UC
+                        VP Campus Affairs Woods reported on behalf of Legislative Committee that the following items
+                        were approved: Appointment of Alexis Wesley to the position of Bear Garden Coordinator
+                        effective immediately until the appointment of a successor; Appointment of Sierra Badua to the
+                        position of Festivals Coordinator effective immediately until the appointment of a successor;
+                        Appointment of Jennifer Lee to the position of Festivals Coordinator effective immediately until
+                        the appointment of a successor; Appointment of Vicknes Vijayarengan to the position of Special
+                        Events Coordinator effective immediately until the appointment of a successor; Appointment of
+                        Ayoung Choi to the position of Special Events Coordinator effective immediately until the
+                        appointment of a successor; Appointment of Eva Lee as ASCE Marketing Coordinator effective
+                        immediately until the appointment of a successor. Sponsored by Daron Woods; Appointment of
+                        Jay Wilson as ASCE Marketing Coordinator effective immediately until the appointment of a
+                        successor.
+                        <br><br>
+                        VP Campus Affairs Woods moved to discharge the following items from Legislative Committee:
+                        Appointment of Sally Rong as AS Fellowship Director effective immediately until appointment
+                        of a successor; Appointment of Nicole Morris as AS Fellowship Director effective immediately
+                        until appointment of a successor. <br>
+                        <br>
+                        Senator Milledge moved to approve, which passed.
+                        <br>Financial Controller Park moved to table Special Presentation by Sherlock Li regarding Triton
+                        Food Pantry Funding 1 week, which passed. <br> <br>
+                        Roll Was Called Again:</p><br>
+                        <table><tr>
+                                <th>Kiara Gomez</th>
+                                <th>Daron Woods</th>
+                                <th>Caroline Siegel-Singh</th>
+                                <th>Nathan Park</th> 
+                                <th>Daniela Bernardi</th>
+                                <th>Kenji Asakura</th>
+                                <th>Kevin Le</th>
+                            </tr></table>
+                        <p>
+                        <br>Time Adjourned: 8pm<br>
+                        <br>
+                        Christian Walker, Clerk<br>
+                        Kiara Gomez, President<br><br></p></div></span>
+                        </li></div>
+            <li>
+                <a href="#"> <div class="text-wrapper"><h2>Fall 18/19 Meeting 1</h2><p></p></div></a>
+            </li>
+            <li>
+                <a href="#"> <div class="text-wrapper"><h2>Spring 17/18 Meeting 10</h2><p> </p></div></a>
+            </li>
+            <li>
+                <a href="#"> <div class="text-wrapper"><h2>Spring 17/18 Meeting 9</h2><p> </p></div></a>
+            </li>
+            <li>
+                <a href="#"> <div class="text-wrapper"><h2>Spring 17/18 Meeting 8</h2><p> </p></div></a>
+            </li>
+            <li>
+                <a href="#"> <div class="text-wrapper"><h2>Spring 17/18 Meeting 7</h2><p> </p></div></a>
+            </li>
+            <li>
+                <a href="#"> <div class="text-wrapper"><h2>Spring 17/18 Meeting 6</h2><p> </p></div></a>
+            </li>
+            <li>
+                <a href="#"> <div class="text-wrapper"><h2>Spring 17/18 Meeting 5</h2><p> </p></div></a>
+            </li>
+            <li>
+                <a href="#"> <div class="text-wrapper"><h2>Spring 17/18 Meeting 4</h2><p> </p></div></a>
+            </li>
+            <li>
+                <a href="#"> <div class="text-wrapper"><h2>Spring 17/18 Meeting 3</h2><p> </p></div></a>
+            </li>
+            <li>
+                <a href="#"> <div class="text-wrapper"><h2>Spring 17/18 Meeting 2</h2><p> </p></div></a>
+            </li>
+            <li>
+                <a href="#"> <div class="text-wrapper"><h2>Winter 17/18 Meeting 9</h2><p> </p></div></a>
+            </li>
+            <li>
+                <a href="#"> <div class="text-wrapper"><h2>Winter 17/18 Meeting 8</h2><p> </p></div></a>
+            </li>
+            <li>
+                <a href="#"> <div class="text-wrapper"><h2>Winter 17/18 Meeting 7</h2><p> </p></div></a>
+            </li>
+        </ul>
+    </body>
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src="init.js"></script>
+    </html>
