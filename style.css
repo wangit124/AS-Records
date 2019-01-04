@@ -6,6 +6,8 @@
 body, html {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background:yellow;
+    overflow-x:hidden;
+    height:100vh;
 }
 
 .search-wrap {
@@ -68,7 +70,8 @@ th {
 }
 li {
     width:98%;
-    height: 70px;
+    max-width:1000px;
+    height: 10vh;
     background:white;
     float: center;
     left:0;
@@ -81,14 +84,20 @@ li {
     overflow-x:hidden;
 }
 
+li:hover {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    background:skyblue;
+    height:50vh;
+    transition:0.5s;
+}
+
 a {
     font-size: 24px;
     color: black;
     width:98%;
-    max-height:600vh;
-    height:100vh;
+    height:600vh;
     font-family: monospace;
     text-decoration: none;
-    overflow:hidden;
+    overflow-x:hidden;
 }
 

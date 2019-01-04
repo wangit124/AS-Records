@@ -18,31 +18,14 @@ function searchFunction() {
             li[i].style.display = "";
         }
         else{
-            li[i].style.display = "none";
+            li[i].style.display = 'none';
             li[i].style.visibility="hidden";
         }
     }
 
-    /*for(i=0 ; i< li.length; i++){
-        a = li[i].getElementsByTagName('a')[0];
-        if(a.innerHTML.toUpperCase().indexOf(filter) ){
-            li[i].style.display = "none";
-            li[i].style.visibility="hidden";
-        }
-    }*/
 }
-$(function() {
-    $("li").on("click",function() {
-      showLoader();
-      $("#loading-content").load("dataSearch.php?"+this.id, hideLoader);
-    });
-  });
-  
+
 function open() {
-    var opens=document.getElementById('openable');
-    opensLi=opens.getElementsByTagName('li');
-    opensLi.style.box-shadow="0 5px 5px rgba(0, 0, 0, 0.5)";
-    opensLi.style.background="skyblue";
-    opensLi.style.height="500px";
-    opensLi.style.transition="0.5s";
+    var opens=ul.getElementByTagName('a');
+    opens.style.height="300px";
 }
