@@ -14,7 +14,6 @@
         <div id="search-bar" onclick="hoverup()">
             <input type="text" name="Search" value="" autocomplete="off" id="myinput" onkeyup="searchFunction()" placeholder="AS Records">
         </div>
-        <div class="source"><a href='https://as.ucsd.edu/Home/Minutes'>ORIGINAL SOURCE</a></div>
         <ul id="wrapper">
             <li>
                 <a href="https://as.ucsd.edu/DownloadDocument?id=96&view=True">
@@ -679,40 +678,40 @@ appointment of successor.
         </ul>
         <div class="space"></div>
     </body>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script src="init.js"></script>
+        <script src="jquery-3.3.1.min.js"></script>
+	<script src="init.js"></script>
         <script src="hilitor.js"></script>
 
         <script>
         function searchFunction() {
 
-    var input, filter, ul, li, a, i;
-    input = document.getElementById('myinput');
-    filter = input.value.toUpperCase();
-    ul = document.getElementById('wrapper');
-    li = ul.getElementsByTagName('li');
-    var myHilitor2 = new Hilitor("wrapper");
-    myHilitor2.setMatchType("left");
+	    var input, filter, ul, li, a, i;
+	    input = document.getElementById('myinput');
+	    filter = input.value.toUpperCase();
+	    ul = document.getElementById('wrapper');
+	    li = ul.getElementsByTagName('li');
+	    var myHilitor2 = new Hilitor("wrapper");
+	    myHilitor2.setMatchType("left");
 
-    if (filter!="") {
-            myHilitor2.apply(filter);
-    }
-    else  {
-            myHilitor2.remove();
-    }
-    for(i=0 ; i< li.length; i++){
-        a = li[i].getElementsByTagName('a')[0];
+	    if (filter!="") {
+		    myHilitor2.apply(filter);
+	    }
+	    else  {
+		    myHilitor2.remove();
+	    }
+	    for(i=0 ; i< li.length; i++){
+		a = li[i].getElementsByTagName('a')[0];
 
-        if(a.innerHTML.toUpperCase().indexOf(filter) > -1){
-            li[i].style.visibility="visible";
-            li[i].style.display = "";
-        }
-        else{
-            li[i].style.display = 'none';
-            li[i].style.visibility="hidden";
-        }
-    }
-    }
+		if(a.innerHTML.toUpperCase().indexOf(filter) > -1){
+		    li[i].style.visibility="visible";
+		    li[i].style.display = "";
+		}
+		else{
+		    li[i].style.display = 'none';
+		    li[i].style.visibility="hidden";
+		}
+	    }
+	}
         </script>
 
         

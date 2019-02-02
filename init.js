@@ -12,4 +12,8 @@ $("li").mouseleave(function () {
     $(this).animate({
       "scrollTop": 0
     }, 500);
+    $(this).animate({
+      "scrollLeft": 0
+    }, 500);
+        
   });
